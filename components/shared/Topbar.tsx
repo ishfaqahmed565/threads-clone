@@ -1,7 +1,8 @@
 import { OrganizationSwitcher, SignOutButton, SignedIn } from "@clerk/nextjs";
+import { Darker_Grotesque } from "next/font/google";
 import Image from "next/image";
 import Link from "next/link";
-
+import { dark } from "@clerk/themes";
 export default function TopBar() {
 	return (
 		<nav className="topbar">
@@ -26,6 +27,7 @@ export default function TopBar() {
 				</div>
 				<OrganizationSwitcher
 					appearance={{
+						baseTheme: dark,
 						elements: {
 							organizationSwitcherTrigger: "py-2 px-4",
 						},
